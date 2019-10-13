@@ -21,4 +21,12 @@
     </QueryObject>
   </QueryObjectGroup>
 
+  <QueryObjectGroup Key="分组3">
+    <QueryObject Key="查询4">
+      <![CDATA[
+        SELECT * FROM test_db.dbo.t_record WHERE title LIKE N'测试'
+      ]]>
+    </QueryObject>
+  </QueryObjectGroup>
+
 </LiteSqlConfig>

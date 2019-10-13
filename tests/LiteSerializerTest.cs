@@ -1,6 +1,5 @@
 using System;
 using Xunit;
-using LiteSql;
 
 namespace LiteSql.Tests
 {
@@ -30,6 +29,16 @@ namespace LiteSql.Tests
             LiteSqlConfig config = serializer.FromXml<LiteSqlConfig>("./litesql.xml");
             QueryObject queryObject = config.GetQueryObjectGroup("group2")
                                             .GetQueryObject("sql3");
+            Assert.NotNull(queryObject);
+        }
+
+        [Fact]
+        public void GetQueryObject_For_Chinese_Ok()
+        {
+            LiteSerializer serializer = new LiteSerializer();
+            LiteSqlConfig config = serializer.FromXml<LiteSqlConfig>("./litesql.xml");
+            QueryObject queryObject = config.GetQueryObjectGroup("分组3")
+                                            .GetQueryObject("查询4");
             Assert.NotNull(queryObject);
         }
     }
