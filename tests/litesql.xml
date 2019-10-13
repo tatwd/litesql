@@ -1,9 +1,22 @@
 <LiteSqlConfig>
 
-  <QueryObjectGroup>
-    <QueryObject Key="TestSql">
+  <QueryObjectGroup Key="group1">
+    <QueryObject Key="sql1">
       <![CDATA[
         SELECT * FROM test_db.dbo.t_record WHERE id = 1
+      ]]>
+    </QueryObject>
+  </QueryObjectGroup>
+
+  <QueryObjectGroup Key="group2">
+    <QueryObject Key="sql2">
+      <![CDATA[
+        SELECT * FROM test_db.dbo.t_record WHERE id = 2
+      ]]>
+    </QueryObject>
+    <QueryObject Key="sql3">
+      <![CDATA[
+        SELECT * FROM test_db.dbo.t_record WHERE id = 3
       ]]>
     </QueryObject>
   </QueryObjectGroup>
