@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 
 namespace LiteSql
 {
-    public class Serializer
+    public class LiteSerializer
     {
         public T FromXml<T>(string xmlFilePath)
         {
