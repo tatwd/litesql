@@ -7,9 +7,10 @@ namespace LiteSql
     [Serializable]
     public class LiteSqlConfig
     {
-        public QueryObject[] QueryObjectGroup { get; set; }
+        [XmlElement("QueryObjectGroup", typeof(QueryObjectGroup))]
+        public QueryObjectGroup[] QueryObjectGroups { get; set; }
 
-        public QueryObject GetQueryObject(string key) =>
-            QueryObjectGroup.FirstOrDefault(i=> i.Key == key);
+        public QueryObjectGroup GetQueryObjectGroup(string key) =>
+            QueryObjectGroups.FirstOrDefault(i=> i.Key == key);
     }
 }
